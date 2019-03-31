@@ -1,0 +1,394 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#"
+     xml:base="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#canViolate -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#canViolate"/>
+    
+
+
+    <!-- http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#concerning -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#concerning"/>
+    
+
+
+    <!-- http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#givesRiseTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#givesRiseTo"/>
+    
+
+
+    <!-- http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#imposes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#imposes"/>
+    
+
+
+    <!-- http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#increases -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#increases"/>
+    
+
+
+    <!-- http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#isValued -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#isValued"/>
+    
+
+
+    <!-- http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#isValuedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#isValuedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#values"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#threatens -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#threatens"/>
+    
+
+
+    <!-- http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#toReduce -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#toReduce"/>
+    
+
+
+    <!-- http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#values -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#values"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#Asset -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#Asset">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#isValuedBy"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#Owner"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Common Criteria for Information Technology Security Evaluation
+Part 1: Introduction and general model</rdfs:comment>
+        <rdfs:isDefinedBy>Assets are entities that someone places value upon</rdfs:isDefinedBy>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.commoncriteriaportal.org/files/ccfiles/CCPART1V3.1R5.pdf</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#Countermeasure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#Countermeasure">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#toReduce"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#Risk"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Common Criteria for Information Technology Security Evaluation
+Part 1: Introduction and general model</rdfs:comment>
+        <rdfs:isDefinedBy>Countermeasures are imposed to reduce the risks to assets. These countermeasures may consist of IT countermeasures (such as firewalls and smart cards) and non-IT countermeasures (such as guards and procedures). See also ISO/IEC 27001 and ISO/IEC 27002 for a more general discussion on security countermeasures (controls).</rdfs:isDefinedBy>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.commoncriteriaportal.org/files/ccfiles/CCPART1V3.1R5.pdf</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.iso.org/isoiec-27001-information-security.html</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#EncounteredVulnerability -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#EncounteredVulnerability">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#Vulnerability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#ExploitableVulnerability -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#ExploitableVulnerability">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#Vulnerability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#HumanVulnerabilty -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#HumanVulnerabilty">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#Vulnerability"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://arch.simplicable.com/arch/new/the-big-list-of-information-security-vulnerabilities</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#NetworkVulnerability -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#NetworkVulnerability">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#TechnicalVulnerability"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://arch.simplicable.com/arch/new/the-big-list-of-information-security-vulnerabilities</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#Owner -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#Owner">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#imposes"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#Countermeasure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#values"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#Asset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Common Criteria for Information Technology Security Evaluation
+Part 1: Introduction and general model</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.commoncriteriaportal.org/files/ccfiles/CCPART1V3.1R5.pdf</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#PotentialVulnerability -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#PotentialVulnerability">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#Vulnerability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#ResidualVulnerability -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#ResidualVulnerability">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#Vulnerability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#Risk -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#Risk">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#threatens"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#Asset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Common Criteria for Information Technology Security Evaluation
+Part 1: Introduction and general model</rdfs:comment>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.commoncriteriaportal.org/files/ccfiles/CCPART1V3.1R5.pdf</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#SFR -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#SFR">
+        <rdfs:isDefinedBy>Security Function Requirements (SFRs) are enforced over the TOE resources. The SFRs define the rules by which the TOE governs access to and use of its resources, and thus information and services controlled by the TOE.</rdfs:isDefinedBy>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.commoncriteriaportal.org/files/ccfiles/CCPART1V3.1R5.pdf</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#SoftwareVulnerability -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#SoftwareVulnerability">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#TechnicalVulnerability"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://arch.simplicable.com/arch/new/the-big-list-of-information-security-vulnerabilities</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#TOE -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#TOE">
+        <rdfs:comment>Common Criteria for Information Technology Security Evaluation
+Part 1: Introduction and general model</rdfs:comment>
+        <rdfs:isDefinedBy>A TOE (Target of Evaluation) is defined as a set of software, firmware and/or hardware possibly accompanied by guidance</rdfs:isDefinedBy>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.commoncriteriaportal.org/files/ccfiles/CCPART1V3.1R5.pdf</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#TSF -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#TSF">
+        <rdfs:isDefinedBy>Common Criteria for Information Technology Security Evaluation
+Part 1: Introduction and general model</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy>Those portions of a TOE that must be relied on for the correct enforcement of the SFRs are collectively referred to as the TOE Security Functionality (TSF)</rdfs:isDefinedBy>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.commoncriteriaportal.org/files/ccfiles/CCPART1V3.1R5.pdf</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#TechnicalVulnerability -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#TechnicalVulnerability">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#Vulnerability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#Threat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#Threat">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#increases"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#Risk"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Common Criteria for Information Technology Security Evaluation
+Part 1: Introduction and general model</rdfs:comment>
+        <rdfs:isDefinedBy>(...)  potential for impairment of the assets such that the value of the assets to the owners would be reduced</rdfs:isDefinedBy>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.commoncriteriaportal.org/files/ccfiles/CCPART1V3.1R5.pdf</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#ThreatAgent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#ThreatAgent">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#givesRiseTo"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#Threat"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Common Criteria for Information Technology Security Evaluation
+Part 1: Introduction and general model</rdfs:comment>
+        <rdfs:isDefinedBy>An entity that can adversely act on assets</rdfs:isDefinedBy>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.commoncriteriaportal.org/files/ccfiles/CCPART1V3.1R5.pdf</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#ThreatByAttacker -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#ThreatByAttacker">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#ThreatByMaliciousActors"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#ThreatByEmployee -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#ThreatByEmployee">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#ThreatByMaliciousActors"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#ThreatByMaliciousActors -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#ThreatByMaliciousActors">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#Threat"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://arch.simplicable.com/arch/new/the-big-list-of-information-security-threats</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#ThreatByNatureOrAccident -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#ThreatByNatureOrAccident">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#Threat"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://arch.simplicable.com/arch/new/the-big-list-of-information-security-threats</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#ThreatByOutsider -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#ThreatByOutsider">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#ThreatByMaliciousActors"/>
+        <rdfs:isDefinedBy>Someone outside the Owner&apos;s organization that acts not according to policies</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#ThreatByUser -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#ThreatByUser">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#ThreatByOutsider"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#Vulnerability -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#Vulnerability">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#canViolate"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#SFR"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#concerning"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/bernd/ontologies/2019/elattoma/main#TOE"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Common Criteria for Information Technology Security Evaluation
+Part 1: Introduction and general model</rdfs:comment>
+        <rdfs:comment>Information Security Risk Management for ISO27001/ISO27002
+Author: Calder, Alan, Watkins, Steve G.
+
+Vulnerabilities are flaws or weaknesses in an asset
+
+This is not adopted here!</rdfs:comment>
+        <rdfs:isDefinedBy>Weakness in the TOE that can be used to violate the SFRs in some environment</rdfs:isDefinedBy>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.commoncriteriaportal.org/files/ccfiles/CCPART1V3.1R5.pdf</rdfs:seeAlso>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
