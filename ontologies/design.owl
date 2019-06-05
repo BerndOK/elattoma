@@ -1,0 +1,330 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#"
+     xml:base="http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#consistsOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#consistsOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#establishes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#establishes">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#hasUse -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#hasUse">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#hasUse"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#Utilization"/>
+            </owl:Restriction>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#implies -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#implies">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#AccessType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#AccessType"/>
+    
+
+
+    <!-- http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#Authentication -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#Authentication">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#consistsOf"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#Identification"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#establishes"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#Identity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#Identification -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#Identification">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#Ressource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#Identity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#Identity">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#implies"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#Role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#Login -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#Login">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#TwoFactorAuthentication"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#consistsOf"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#Password"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#consistsOf"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#UserName"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#MultiFactorAuthentication -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#MultiFactorAuthentication">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#Authentication"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#consistsOf"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#Identification"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#Password -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#Password">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#Identification"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#VerifiableRessource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#Processing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#Processing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#Utilization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#ProtectedRessource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#ProtectedRessource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#Ressource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#Ressource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#Ressource">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#hasUse"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#Utilization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#Role -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#Role"/>
+    
+
+
+    <!-- http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#SinglePointOfAccess -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#SinglePointOfAccess"/>
+    
+
+
+    <!-- http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#TwoFactorAuthentication -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#TwoFactorAuthentication">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#Authentication"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#consistsOf"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#Identification"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#UserName -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#UserName">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#Identification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#Utilization -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#Utilization"/>
+    
+
+
+    <!-- http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#VerifiableRessource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#VerifiableRessource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#ProtectedRessource"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#hasUse"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#Verification"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#Verification -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#Verification">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#Utilization"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#x">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S1</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#Ressource"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#x"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#Ressource"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/bowsnickiklewe/ontologies/2019/4/untitled-ontology-10#x"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
